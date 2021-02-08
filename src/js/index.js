@@ -2,7 +2,11 @@ window.addEventListener('DOMContentLoaded', function(){
 	mainSlider();
 	testimonialSlider();
 	// brandSlider();
-	mobileMenu();
+	
+
+	if(window.innerWidth <= 992) {
+		mobileMenu();
+	}
 });
 
 const mainSlider = () => {
@@ -56,7 +60,6 @@ const testimonialSlider = () => {
 const mobileMenu = () => {
 
 	$('.js-burger').on('click', function(){
-		
 		$('.js-menu').toggleClass('_opened');
 		menuTopOffset();
 	});
@@ -66,7 +69,6 @@ const mobileMenu = () => {
 		$('.js-menu').css('top', topOffset + 'px');
 		$('.js-menu').css('height', 'calc(100vh - '+ topOffset +'px)');
 	}
-
 	
 	const stickyNavTop = $('.header__menu-button').offset().top;
 	const stickyNav = function(){
@@ -84,5 +86,11 @@ const mobileMenu = () => {
 		stickyNav();
 		menuTopOffset();
 	});	
+
+	$('.menu__item._submenu').on('click',function(e){
+		e.preventDefault();
+		$(this).find('.submenu').toggle();
+		$(this).toggleClass('_opened');
+	});
 		
 }

@@ -59,6 +59,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 2;
 
 	&__buttons {
 		display: flex;
@@ -89,6 +90,10 @@
 		fill: white;
 		display: inline-block;
 		margin-right: 46px;
+
+		&:last-child {
+			margin: 0;
+		}
 	}
 }
 
@@ -322,6 +327,14 @@
 
 @include _xl {
 
+	.header {
+
+		&__logo {
+			max-width: 170px;
+			margin-right: 40px;
+		}
+	}
+
 	.top-bar {
 
 		&__item {
@@ -335,7 +348,15 @@
 				padding-left: 40px;
 			}
 		}
-	}	
+	}
+	
+	.menu {
+
+		&__item {
+			padding: 0 22px;
+		}
+	}
+		
 }
 
 @include _lg {
@@ -347,23 +368,51 @@
 			visibility: visible;
 			position: relative;
 
+			.container {
+				display: flex;
+				justify-content: center;
+			}
+
 			&._sticky {
 				position: fixed;
 				top: 55px;
 			}
 		}
-	}
+
+		&__logo {
+			margin-right: 0;
+			max-width: 100%;
+		}
+	}	
 
 	.header-main {
 
 		&__inner {
 			padding: 35px 0;
+			justify-content: center;
+			position: relative;
+		}
+
+		.button-information {
+			margin: 0;
+			position: absolute;
+			left: calc(50% + 140px);
+			top: 10px;
+
+			.icon-information {
+				width: 21px;
+				height: 21px;
+			}
 		}
 	}
 
 	.mobile-bar {
 		display: block;
 		visibility: visible;
+
+		&__buttons {
+			justify-content: center;
+		}
 	}
 
 	.top-bar {
@@ -374,15 +423,34 @@
 	.menu {
 		display: none;
 		background: white;
-		width: 100%;
 		height: calc(100vh - 202px);
 		top: 0;
 		left: 0;
+		width: 100%;
 		overflow: auto;
+		text-align: center;
 
 		&__list {
 			display: flex;
 			flex-direction: column;
+			max-width: 720px;
+			margin: 0 auto;
+			padding: 0 20px;
+			min-width: 360px;
+		}
+
+		&__item {
+			padding: 0 30px;
+			&:last-child,
+			&:first-child {
+				padding: 0 30px;
+			}
+
+			&::before {
+				display: none;
+			}
+
+			
 		}
 
 		&._opened {
@@ -391,6 +459,31 @@
 		}
 	}
 
+	.menu__item._submenu {
+		position: relative;
+		&::before,
+		&::after {
+			content: '';
+			width: 12px;
+			height: 2px;
+			position: absolute;
+			background: $colorBordo;
+			right: 30px;
+			top: 16px;
+			transition: transform 0.2s;
+			display: block;
+			transform: none;
+		}
+
+		&::after {
+			transform: rotate(90deg);
+		}
+
+		&._opened::after {
+			transform: rotate(0deg);
+		}
+	} 
+
 	.menu__item {
 		.submenu {
 			visibility: visible;
@@ -398,5 +491,10 @@
 			position: static;
 			transform: translateY(0);
 		}
+	}
+
+	.submenu {
+		padding: 14px 28px;
+		display: none;
 	}
 }

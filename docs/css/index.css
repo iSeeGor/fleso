@@ -1534,10 +1534,11 @@ h6 {
 
 .mobile-bar {
     position: fixed;
+    z-index: 2; 
     top: 0;
     display: none;
     visibility: hidden;
-    width: 100%; 
+    width: 100%;
     padding: 10px 0;
     background-color: #e27437;
 }
@@ -1570,6 +1571,9 @@ h6 {
     margin-right: 46px; 
 
     fill: white;
+}
+.mobile-bar__button:last-child {
+    margin: 0;
 }
 
 .top-bar__container {
@@ -1799,12 +1803,19 @@ h6 {
 }
 
 @media (max-width: 1260px) {
+    .header__logo {
+        max-width: 170px;
+        margin-right: 40px;
+    }
     .top-bar__item {
         font-size: 14px;
         line-height: 18px;
     }
     .top-bar__section._address {
         padding-left: 40px;
+    }
+    .menu__item {
+        padding: 0 22px;
     }
 }
 
@@ -1819,16 +1830,47 @@ h6 {
         display: flex;
         visibility: visible;
     }
+    .header__menu-button .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
     .header__menu-button._sticky {
         position: fixed;
         top: 55px;
     }
+    .header__logo {
+        max-width: 100%; 
+        margin-right: 0;
+    }
     .header-main__inner {
+        position: relative; 
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         padding: 35px 0;
+    }
+    .header-main .button-information {
+        position: absolute;
+        top: 10px; 
+        left: calc(50% + 140px);
+        margin: 0;
+    }
+    .header-main .button-information .icon-information {
+        width: 21px;
+        height: 21px;
     }
     .mobile-bar {
         display: block;
         visibility: visible;
+    }
+    .mobile-bar__buttons {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
     .top-bar {
         display: none;
@@ -1838,9 +1880,10 @@ h6 {
         top: 0;
         left: 0;
         display: none;
-        overflow: auto; 
+        overflow: auto;
         width: 100%;
         height: calc(100vh - 202px);
+        text-align: center; 
         background: white;
     }
     .menu__list {
@@ -1851,12 +1894,58 @@ h6 {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+        min-width: 360px; 
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .menu__item {
+        padding: 0 30px;
+    }
+    .menu__item:last-child,
+    .menu__item:first-child {
+        padding: 0 30px;
+    }
+    .menu__item::before {
+        display: none;
     }
     .menu._opened {
         position: fixed; 
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+    }
+    .menu__item._submenu {
+        position: relative;
+    }
+    .menu__item._submenu::before,
+    .menu__item._submenu::after {
+        position: absolute;
+        top: 16px;
+        right: 30px;
+        display: block;
+        width: 12px;
+        height: 2px;
+        content: '';
+        -webkit-transition: -webkit-transform .2s;
+             -o-transition:         transform .2s;
+                transition: -webkit-transform .2s;
+                transition:         transform .2s;
+                transition:         transform .2s, -webkit-transform .2s;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none; 
+        background: #742830;
+    }
+    .menu__item._submenu::after {
+        -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    .menu__item._submenu._opened::after {
+        -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
     .menu__item .submenu {
         position: static;
@@ -1865,6 +1954,10 @@ h6 {
             -ms-transform: translateY(0);
                 transform: translateY(0); 
         opacity: 1;
+    }
+    .submenu {
+        display: none; 
+        padding: 14px 28px;
     }
 }
 

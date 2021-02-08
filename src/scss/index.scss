@@ -1,0 +1,46 @@
+/* settings
+===================================================*/
+@import 'settings/variables';
+@import 'settings/mixin';
+@import 'settings/normalize';
+
+
+/* vendor
+===================================================*/
+// @import 'node_modules/bootstrap/scss/bootstrap-grid';
+
+/* global
+===================================================*/
+@import 'global/keyframes';
+@import 'global/fonts';
+@import 'global/base';
+@import 'global/typography';
+
+/* ui/ux
+===================================================*/
+@import 'ui/buttons';
+@import 'ui/icons';
+@import 'ui/form';
+
+/* common
+===================================================*/
+@import 'common/common';
+@import 'common/helpers';
+
+/* components
+===================================================*/
+@import 'view/components/breadcrumbs';
+@import 'view/components/card';
+@import 'view/components/mobile-menu.scss';
+@import 'view/components/pagination';
+
+/* views
+===================================================*/
+@import 'view/partials/header';
+@import 'view/partials/footer';
+
+@import 'view/pages/front-page';
+
+/* Modals
+===================================================*/
+@import 'view/partials/modals';

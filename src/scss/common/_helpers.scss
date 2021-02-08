@@ -1,0 +1,21 @@
+/*============================================================================
+	#HELPERS
+==============================================================================*/
+
+.overflow {
+	overflow: hidden;
+}
+
+.pixelated {
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+}
+
+.list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+

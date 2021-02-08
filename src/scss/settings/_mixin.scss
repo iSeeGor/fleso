@@ -1,0 +1,77 @@
+@mixin H1($prop-color: #000000) {
+	font-family: $fontHeadings;
+	font-size: 48px;
+	line-height: 1.185;
+	font-weight: $regular;
+	color: $prop-color;
+}
+ 
+@mixin H3($prop-color: #000000) {
+	font-family: $fontHeadings;
+	font-size: 24px;
+	line-height: 1.185;
+	font-weight: $regular;
+	color: $prop-color;
+}
+
+@mixin Header18($prop-color: #000000) {
+	font-family: $fontPrimary;
+	font-size: 20px;
+	line-height: 1.52;
+	font-weight: $regular;
+	color: $prop-color;
+}
+
+@mixin text-descr($prop-color:#000000) {
+	font-family: $fontPrimary;
+	font-size: 14px;
+	line-height: 1.52;
+	font-weight: $regular;
+	color: $prop-color;
+}
+
+@mixin Heding() {
+	font-family: $fontHeadings;
+    font-weight: $bold;
+    line-height: 1.2;
+	font-size: 32px;
+	color: #000000;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+@mixin _1490 {
+    @media (max-width: 1490px){
+        @content;
+    }
+}
+@mixin _1240 {
+    @media (max-width: 1240px){
+        @content;
+    }
+}
+@mixin _1000 {
+    @media (max-width: 1000px){
+        @content;
+    }
+}
+@mixin _768 {
+    @media (max-width: 768px){
+        @content;
+    }
+}
+@mixin _580 {
+    @media (max-width: 580px){
+        @content;
+    }
+}
+@mixin _480 {
+    @media (max-width: 480px){
+        @content;
+    }
+}
+@mixin _350{
+    @media (max-width: 350px){
+        @content;
+    }
+}

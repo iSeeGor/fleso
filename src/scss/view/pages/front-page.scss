@@ -1,0 +1,299 @@
+/*============================================================================
+	#Front Page
+==============================================================================*/
+.section {
+
+	&__header {
+
+		position: relative;
+		padding: 33px 0;
+		text-align: center;
+		margin: 40px 0;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 82px;
+			height: 3px;
+			background: $colorOrange;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+	}
+
+	&__title {
+		font-family: $fontPrimary;
+		font-weight: $bold;
+		font-size: 43px;
+		text-transform: uppercase;
+		margin: 0;
+		line-height: 1.3;
+
+		span {
+			color: $colorOrange;
+		}
+	}
+
+	&__typography {
+		text-align: center;
+		margin: 40px 0;
+	}
+}
+
+.section-card {
+	position: relative;
+	background: $colorBlack;
+	height: 330px;
+	margin: 40px 0 165px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 10px;
+		height: 100%;
+		background: $colorBordo;
+	}
+
+	&__inner {
+		display: flex;
+		height: 100%;
+	}
+
+	&__media,
+	&__content {
+		flex: 0 0 50%;
+		max-width: 50%;
+		color: white;
+	}
+
+	&__media {
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		padding: 36px 46px 36px 49px;
+	}
+
+	&__title {
+		font-family: $fontSecondary;
+		font-weight: $regular;
+		font-size: 30px;
+		color: white;
+		line-height: 0.93;
+		margin-bottom: 28px;
+		max-height: 54px;
+		overflow: hidden;
+	}
+
+	&__typography {
+		max-height: 140px;
+		overflow: hidden;
+	}
+	
+
+	&__button {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background: $colorOrange;
+		transform: translateY(50%);
+	}
+}
+
+.main-slider {
+
+	.swiper-slide {
+		min-height: 640px;
+	}
+}
+
+.testimonial {
+	
+	&__slider-section {
+		padding: 40px 0;
+		background: $colorBlack;
+		color: white;
+	}
+
+	&__item {
+
+	}
+
+	&__header {
+		text-align: center;
+	}
+
+	&__icon {
+		width: 36px;
+		margin-right: 20px;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $fontSecondary;
+		font-size: 30px;
+		font-weight: $regular;
+		line-height: 1.2;
+		color: white;
+
+		span {
+			color: $colorOrange;
+			display: inline-block;
+		}
+	}
+
+	&__descr {
+		margin-top: 25px;
+	}
+
+	&__body {
+		margin-top: 40px;
+		text-align: center;
+	}
+
+	&__message {
+		font-size: 30px;
+		line-height: 1.16;
+		font-family: $fontSecondary;
+		color: $colorOrange;
+
+	}
+
+	&__user {
+		color: $colorOrange;
+		font-size: 14px;
+		margin-top: 18px;
+	}
+}
+
+.brands {
+	padding: 38px 0 44px;
+	margin: 50px 0 70px;
+	border-top: 1px solid #BABABA;
+	border-bottom: 1px solid #BABABA;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.text-section {
+	padding: 30px 0 55px;
+	background: $colorBlack;
+	color: white;
+
+	&__header {
+		display: flex;
+		// align-items: center;
+		margin-bottom: 33px;
+	}
+
+	&__pre-title {
+		color: $colorOrange;
+		fill: $colorOrange;
+		font-family: $fontSecondary;
+		font-size: 30px;
+		display: flex;
+		align-items: center;
+		margin-right: 22px;
+		margin-left: 8px;
+		flex: 0 0 auto;
+		height: 100%;
+
+		.icon {
+			width: 31px;
+			height: 31px;
+			margin-right: 26px;
+		}
+	}
+
+	&__title {
+		font-size: 30px;
+		font-family: $fontSecondary;
+		color: white;
+		font-weight: $regular;
+	}
+
+	&__body {
+		display: flex;
+	}
+
+	&__media {
+		height: 350px;
+		width: 387px;
+		flex: 0 0 auto;
+		border: 4px solid white;
+		margin-right: 48px;
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__typography {
+		height: 350px;
+		overflow: hidden;
+	}
+}
+
+.section-info {
+	padding: 20px 0;
+	background: $colorBlack;
+	color: white;
+	margin-bottom: 105px;
+
+	&__header {
+		display: flex;
+	}
+
+	&__pre-title {
+		color: $colorOrange;
+		fill: $colorOrange;
+		font-family: $fontSecondary;
+		font-size: 30px;
+		display: flex;
+		align-items: center;
+		margin-right: 22px;
+		margin-left: 8px;
+		flex: 0 0 auto;
+		height: 100%;
+
+		.icon {
+			width: 31px;
+			height: 31px;
+			margin-right: 26px;
+		}
+	}
+
+	&__title {
+		font-size: 30px;
+		font-family: $fontSecondary;
+		color: white;
+		font-weight: $regular;
+	}
+}

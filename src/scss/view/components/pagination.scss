@@ -1,0 +1,43 @@
+/*============================================================================
+	#Pagination
+==============================================================================*/
+.pagination {
+
+	&__list {
+	
+	}
+
+	&__button {
+		color: black;
+		font-size: 18px;
+		line-height: 1;
+		text-decoration: none;
+		display: inline-block;
+		padding: 4px 4px;
+		transition: color 0.1s, fill 0.1s;
+
+		&._current {
+			background: #ffed00;
+			padding: 4px 8px;
+
+			&:hover {
+				color: inherit;
+			}
+		}
+
+		&:active,
+		&:visited {
+			color: black;
+		}
+
+		&:hover {
+			color: #000000;
+			fill: #000000;
+		}
+
+		&._prev,
+		&._next {
+			margin: 0 5px;
+		}
+	}
+}

@@ -1,0 +1,181 @@
+.header__mobile-nav {
+	z-index: 21;
+}
+
+@media (max-width: 1200px) {
+	body {
+		min-height: 100vh;
+		min-height: -webkit-fill-available;
+	}
+	html {
+		height: -webkit-fill-available;
+	}
+}
+
+.mobile-nav {
+	position: fixed;
+	width: 100%;
+	height: calc(100% - 58px);
+	background: white;
+	transform: translateX(-100%);
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.6s ease;
+
+	&__container {
+		overflow-y: auto;
+		height: 100%;
+		max-width: 660px;
+		margin: 0 auto;
+	}
+
+	&__footer {
+		position: fixed;
+		bottom: 0;
+		height: 25%;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 72.4%);;
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		padding: 14px 22px;
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY(10px);
+		transition: all 0.3s ease;
+
+		&._is-visible {
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0px);
+		}
+
+		.icon-down-double {
+			animation: 1s pulse infinite;
+		}
+
+	}
+
+	&._is-visible {
+		transform: translateX(0);
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.m-menu {
+	padding-bottom: 70px;
+	overflow: hidden;
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	&__item {
+		padding: 0 23px;
+		
+	}
+
+	&__link {
+		@include Header18();
+		border-bottom: 1px solid #000000;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-decoration: none;
+		padding: 20px 0;
+
+		&:active,
+		&:visited {
+			color: #000000;
+		}
+	}
+
+	&__link-text {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+}
+
+.m-submenu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100vh - 60px);
+	background: white;
+	transform: translateX(100%);
+	visibility: hidden;
+	transition: all 0.6s ease;
+	
+
+	&._is-visible {
+		transform: translateX(0);
+		visibility: visible;
+	}
+
+	&__header {
+		display: flex;
+		// justify-content: center;
+		align-items: center;
+		background: black;
+		padding: 15px 0 15px 10px;
+
+		.icon {
+			fill: white;
+			margin-right: 15px;
+		}
+	}
+
+	&__title {
+		@include Header18();
+		color: white;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-right: 35px;
+	}
+
+	&__container {
+		height: calc(100% - 60px);
+		overflow-y: auto;
+		padding-bottom: 70px;
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	&__item {
+		padding: 0 23px;
+		
+	}
+
+	&__link {
+		@include Header18();
+		border-bottom: 1px solid #000000;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-decoration: none;
+		padding: 20px 0;
+
+		&:active,
+		&:visited {
+			color: #000000;
+		}
+	}
+
+	&__link-text {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+}

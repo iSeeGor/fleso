@@ -1,0 +1,37 @@
+/*============================================================================
+	#BREADCRUMBS
+==============================================================================*/
+.breadcrumbs {
+	color: #000000;
+	fill: #000000;
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		@include Header18(inherit);
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		
+	}
+
+	&__item {
+		display: flex;
+		margin-right: 10px;
+		.icon {
+			margin-left: 10px;
+		}
+	}
+
+	&__link {
+
+		text-decoration: none;
+		@include Header18(inherit);
+
+		&:hover {
+			color: #000000;
+		}
+
+	}
+}

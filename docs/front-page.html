@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Fleso</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!--== Preload Fonts -->
+	<link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff" crossorigin="">
+	<link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff" crossorigin="">
+
+
+	<!--== favicon  -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="body">
+	<div class="site">
+
+		<header class="site__header header">
+			<div class="header__top-bar top-bar">
+				<div class="top-bar__container container">
+					<div class="top-bar__section _contacts">
+						<a class="top-bar__item _mail" href="mailto:info@fleso.de">
+							<svg class="icon icon-email">
+								<use xlink:href="symbol/sprite.svg#email"></use>
+							</svg>
+							info@fleso.de</a>
+						<a class="top-bar__item" href="tel:0338139130">
+							<svg class="icon icon-phone">
+								<use xlink:href="symbol/sprite.svg#phone"></use>
+							</svg>
+							03381 - 39 130
+						</a>
+					</div>
+					<div class="top-bar__section _address">
+						<span class="top-bar__item _address">
+							<svg class="icon icon-clock">
+								<use xlink:href="symbol/sprite.svg#clock"></use>
+							</svg>
+							Mo - Fr: 09:00 Uhr - 18:00 Uhr . Sa: 09:00 Uhr - 16:00 Uhr
+						</span>
+						<span class="top-bar__item">
+							<svg class="icon icon-marker">
+								<use xlink:href="symbol/sprite.svg#map-marker"></use>
+							</svg>
+							Barnimstraße 26 . 14770 Brandenburg / Havel
+						</span>
+						<span class="top-bar__item">
+							<div class="socialmedia">
+								<a href="#" class="socialmedia__item _facebook">
+									<svg class="icon icon-facebook">
+										<use xlink:href="symbol/sprite.svg#facebook"></use>
+									</svg>
+								</a>
+							</div>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="header__main header-main">
+				<div class="header-main__container container">
+					<div class="header-main__inner">
+						<a href="/" class="header__logo">
+							<img src="images/logo.svg" alt="">
+						</a>
+
+						<nav class="header__menu menu">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="/" class="menu__link _active">Home</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Über Uns</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Service</a>
+
+								<ul class="submenu">
+									<li class="submenu__item">
+										<a href="#" class="submenu__link">Trockenbau</a>
+									</li>
+									<li class="submenu__item">
+										<a href="#" class="submenu__link">Bodenlegearbeiten</a>
+									</li>
+									<li class="submenu__item">
+										<a href="#" class="submenu__link">Malerarbeiten</a>
+									</li>
+									<li class="submenu__item">
+										<a href="#" class="submenu__link">Raumausstattung</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Sortiment</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Angebote</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Kontakt</a>
+							</li>
+						</ul>
+						</nav>
+
+						<button class="button-rst button-information">
+							<svg class="icon icon-information">
+								<use xlink:href="symbol/sprite.svg#info-circle"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="main-slider">
+			<div class="main-slider__container swiper-container js-main-slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="swiper-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/demo/slider-image-1.jpg" alt="">
+						<div class="swiper-lazy-preloader"></div>
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/demo/slider-image-1.jpg" alt="">
+						<div class="swiper-lazy-preloader"></div>
+					</div>
+					<div class="swiper-slide">
+						<img class="swiper-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/demo/slider-image-1.jpg" alt="">
+						<div class="swiper-lazy-preloader"></div>
+					</div>s
+				</div>
+			</div>
+
+			<div class="main-slider__pagination swiper-pagination js-main-slider-pagination"></div>
+		</div>
+
+		<div class="section">
+			<div class="container">
+				<header class="section__header">
+					<h2 class="section__title"><span>Seit 1990:</span> Ihr Partner für schönes Wohnen</h2>
+				</header>
+				<div class="section__typography typography">
+					<p>Wenn es Rund um das Thema Raumgestaltung geht, bieten Ihnen die FleSo’s-Fachmärkte einen erstklassigen Service für wenig Geld. FleSo’s ist bekannt für seine Kundenberatung, den erstklassigen Service und seine Top-Qualität. Wenn es Rund um das Thema Raumgestaltung geht, bieten Ihnen die FleSo’s-Fachmärkte einen erstklassigen Service für wenig Geld.</p>
+				</div>
+				<div class="section-card">
+					<div class="section-card__inner">
+						<div class="section-card__media">
+							<img class="lazy-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/demo/post-card-image-2.jpg" alt="">
+						</div>
+						<div class="section-card__content">
+							<h3 class="section-card__title">Lorem ipsum dolor sit amet, sadipscing elitr Lorem ipsum</h3>
+							<div class="section-card__typography typography">
+								<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea </p>
+							</div>
+						</div>
+						<a href="#" class="section-card__button button-primary">
+							Alle Handwerkerleistungen ansehen
+							<svg class="icon icon-arrow-right">
+								<use xlink:href="symbol/sprite.svg#arrow-right"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="testimonial">
+			<div class="testimonial__slider-section">
+				<div class="testimonial__slider swiper-container js-testimonial-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="container">
+								<div class="testimonial__item">
+									<header class="testimonial__header">
+										<h3 class="testimonial__title">
+											<img class="testimonial__icon"  src="icons/heart.svg" alt="">
+											<span>Ihre Meinung ist uns wichtig!&nbsp</span>Für Kritik sind wir immer offen.
+										</h3>
+										<div class="testimonial__descr typography">
+											<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, laboriosam quisquam! Cum vel laborum, nihil perferendis aspernatur magni quam rem voluptas repudiandae libero! Quae in repudiandae voluptas minus! Fugiat, magnam.</p>
+										</div>
+									</header>
+									
+									<div class="testimonial__body">
+										<div class="testimonial__message typography">
+											"Sehr guter Service vom Aufmaß bis zum Verlegen. Nette Mitarbeiter. Malerarbeiten im Angebot. Sauber & ordentlich."
+										</div>
+										<div class="testimonial__user">Havel13 - Google</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="container">
+								<div class="testimonial__item">
+									<header class="testimonial__header">
+										<h3 class="testimonial__title">
+											<img class="testimonial__icon"  src="icons/heart.svg" alt="">
+											<span>Ihre Meinung ist uns wichtig!&nbsp</span>Für Kritik sind wir immer offen.
+										</h3>
+										<div class="testimonial__descr typography">
+											<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, laboriosam quisquam! Cum vel laborum, nihil perferendis aspernatur magni quam rem voluptas repudiandae libero! Quae in repudiandae voluptas minus! Fugiat, magnam.</p>
+										</div>
+									</header>
+									
+									<div class="testimonial__body">
+										<div class="testimonial__message typography">
+											"Sehr guter Service vom Aufmaß bis zum Verlegen. Nette Mitarbeiter. Malerarbeiten im Angebot. Sauber & ordentlich."
+										</div>
+										<div class="testimonial__user">Havel13 - Google</div>
+									</div>
+								</div>
+							</div>
+						</div><div class="swiper-slide">
+							<div class="container">
+								<div class="testimonial__item">
+									<header class="testimonial__header">
+										<h3 class="testimonial__title">
+											<img class="testimonial__icon"  src="icons/heart.svg" alt="">
+											<span>Ihre Meinung ist uns wichtig!&nbsp</span>Für Kritik sind wir immer offen.
+										</h3>
+										<div class="testimonial__descr typography">
+											<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, laboriosam quisquam! Cum vel laborum, nihil perferendis aspernatur magni quam rem voluptas repudiandae libero! Quae in repudiandae voluptas minus! Fugiat, magnam.</p>
+										</div>
+									</header>
+									
+									<div class="testimonial__body">
+										<div class="testimonial__message typography">
+											"Sehr guter Service vom Aufmaß bis zum Verlegen. Nette Mitarbeiter. Malerarbeiten im Angebot. Sauber & ordentlich."
+										</div>
+										<div class="testimonial__user">Havel13 - Google</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+			<div class="testimonial__pagination swiper-pagination js-testimonial-slider-pagination"></div>
+		</div>
+
+		<div class="section">
+			<div class="container">
+				<header class="section__header">
+					<h2 class="section__title">Riesen Auswahl -<span>Faire Preise</span></h2>
+				</header>
+			</div>
+		</div>
+
+		<div class="brands">
+			<div class="container">
+				<div class="brands__list">
+					<div class="brands__item">
+						<img src="images/demo/marke-01.jpg" alt="">
+					</div>
+					<div class="brands__item">
+						<img src="images/demo/marke-02.jpg" alt="">
+					</div>
+					<div class="brands__item">
+						<img src="images/demo/marke-03.jpg" alt="">
+					</div>
+					<div class="brands__item">
+						<img src="images/demo/marke-01.jpg" alt="">
+					</div>
+					<div class="brands__item">
+						<img src="images/demo/marke-02.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="container">
+				<div class="section-card">
+					<div class="section-card__inner">
+						<div class="section-card__media">
+							<img class="lazy-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/demo/post-card-image-1.jpg" alt="">
+						</div>
+						<div class="section-card__content">
+							<h3 class="section-card__title">Lorem ipsum dolor sit amet, sadipscing elitr Lorem ipsum</h3>
+							<div class="section-card__typography typography">
+								<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea </p>
+							</div>
+						</div>
+						<a href="#" class="section-card__button button-primary">
+							Alle Handwerkerleistungen ansehen
+							<svg class="icon icon-arrow-right">
+								<use xlink:href="symbol/sprite.svg#arrow-right"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="text-section">
+			<div class="container">
+				<header class="text-section__header">
+					<span class="text-section__pre-title">
+						<svg class="icon icon-circle">
+							<use xlink:href="symbol/sprite.svg#info-circle"></use>
+						</svg>
+						Schon gewusst?
+					</span>
+					<h2 class="text-section__title">Wir bieten Auslegware in einer Breite von 5m an!</h2>
+				</header>
+				<div class="text-section__body">
+					<div class="text-section__media">
+						<img class="lazy-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/demo/flesos-titel.jpg" alt="">
+					</div>
+					<div class="text-section__typography typography">
+						<p>Wenn es Rund um das Thema Raumgestaltung geht, bieten Ihnen die FleSo’s-Fachmärkte einen erstklassigen Service für wenig Geld. FleSo’s ist bekannt für seine Kundenberatung, den erstklassigen Service und seine Top-Qualität. Wenn es Rund um das Thema Raumgestaltung geht, bieten Ihnen die FleSo’s-Fachmärkte einen erstklassigen Service für wenig Geld.</p>
+
+						<p>Wenn es Rund um das Thema Raumgestaltung geht, bieten Ihnen die FleSo’s-Fachmärkte einen erstklassigen Service für wenig Geld. FleSo’s ist bekannt für seine Kundenberatung, den erstklassigen Service und seine Top-Qualität. Wenn es Rund um das Thema Raumgestaltung geht, bieten Ihnen die FleSo’s-Fachmärkte einen erstklassigen Service für wenig Geld.Wenn es Rund um das Thema Raumgestaltung geht, bieten Ihnen die FleSo’s-Fachmärkte einen erstklassigen Service für wenig Geld. FleSo’s ist bekannt für seine Kundenberatung, den erstklassigen Service und seine Top-Qualität. Wenn es Rund um das Thema Raumgestaltung geht, bieten Ihnen die FleSo’s-Fachmärkte einen erstklassigen Service für wenig Geld.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="container">
+				<header class="section__header">
+					<h2 class="section__title"><span>Ronny Mahlow:</span> Neuer Inhaber seit 2019</h2>
+				</header>
+				<div class="section__typography typography">
+					<p>Wenn es Rund um das Thema Raumgestaltung geht, bieten Ihnen die FleSo’s-Fachmärkte einen erstklassigen Service für wenig Geld. FleSo’s ist bekannt für seine Kundenberatung, den erstklassigen Service und seine Top-Qualität. Wenn es Rund um das Thema Raumgestaltung geht, bieten Ihnen die FleSo’s-Fachmärkte einen erstklassigen Service für wenig Geld.</p>
+				</div>
+				<div class="section-card">
+					<div class="section-card__inner">
+						<div class="section-card__media">
+							<img class="lazy-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/demo/post-card-image-1.jpg" alt="">
+						</div>
+						<div class="section-card__content">
+							<h3 class="section-card__title">Lorem ipsum dolor sit amet, sadipscing elitr Lorem ipsum</h3>
+							<div class="section-card__typography typography">
+								<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea </p>
+							</div>
+						</div>
+						<a href="#" class="section-card__button button-primary">
+							Alle Handwerkerleistungen ansehen
+							<svg class="icon icon-arrow-right">
+								<use xlink:href="symbol/sprite.svg#arrow-right"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section-info">
+			<div class="container">
+				<header class="section-info__header">
+					<span class="section-info__pre-title">
+						<svg class="icon icon-circle">
+							<use xlink:href="symbol/sprite.svg#info-circle"></use>
+						</svg>
+						Schon gewusst?
+					</span>
+					<h2 class="section-info__title">Kostenloses Aufmaß direkt bei Ihnen vor Ort!</h2>
+				</header>
+			</div>
+		</div>
+
+		<footer class="site__footer footer">
+			<div class="footer__top">
+				<div class="container">
+					<a href="#" class="footer__logo">
+						<img src="images/logo.svg" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="footer__main footer-main">
+				<div class="container">
+					<div class="footer-main__section">
+						<div class="footer-item">
+							<h3 class="footer-item__title">FleSo's Teppichbodenland Gmbh in Brandenburg an der Havel</h3>
+							<div class="footer-item__content typography">
+								<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, </p>
+							</div>
+						</div>
+					</div>
+					<div class="footer-main__section">
+						<div class="footer-item">
+							<h3 class="footer-item__title">Adresse</h3>
+							<div class="footer-item__content _address">
+								<div class="address">FleSo's Teppichbodenland GmbH Barnimstraße 26 <br>14770 Brandenburg an der Havel</div>
+								<div class="map-link">
+									Google Maps - <a href="#">Routenplaner</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="footer-item">
+							<h3 class="footer-item__title">Kontakt</h3>
+							<div class="footer-item__content _contacts">
+								<div class="contacts">
+									<div class="contacts__item">Tel.: <a class="contacts__link" href="tel:0338139130" >03381 - 39 130</a></div>
+									<div class="contacts__item">Mail: <a class="contacts__link" href="mailto:info@fleso.de" >info@fleso.de</a></div>
+									<div class="contacts__item">Fax: 03381 - 39 130 39</div>
+								</div>
+								<div class="work-time">
+									<div class="work-time__item">Mo - Fr: 09:00 Uhr - 18:00 Uhr</div>
+									<div class="work-time__item">Sa: 09:00 Uhr - 16:00 Uhr</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="footer-item _socialmedia">
+							<div class="footer-socialmedia">
+								<a class="footer-socialmedia__link _facebook" href="#">
+									<svg class="icon icon-facebook-round">
+										<use xlink:href="symbol/sprite.svg#facebook-round"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="copyrights">
+						<span>© 2020</span>
+						FleSo's Teppichbodenland GmbH
+					</div>
+					<nav class="footer-nav">
+						<a href="#" class="footer-nav__link">Impressum</a>
+						<a href="#" class="footer-nav__link">Datenschutz</a>
+					</nav>
+				</div>
+			</div>
+		</footer>
+
+		<div class="site__modals">
+
+</div>
+	</div>
+
+	<script src="js/vendor.js"></script>
+	<script src="js/index.js"></script>
+	</body>
+
+</html>

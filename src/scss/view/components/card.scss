@@ -9,7 +9,6 @@
 		margin-bottom: 46px;
 
 		@media (max-width: 1200px){
-			@include H3();
 			margin-bottom: 32px;
 		}
 	}
@@ -208,7 +207,6 @@
 	}
 
 	&__price {
-		@include Header18();
 	}
 
 	&__options {

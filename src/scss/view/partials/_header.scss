@@ -17,6 +17,79 @@
 
 		padding-top: 8px;
 	}
+
+	&__menu-button {
+		position: fixed;
+		display: flex;
+		display: none;
+		visibility: hidden;
+		width: 100%;
+		background: $colorBordo;
+		color: white;
+		fill: white;
+
+		.burger {
+			border: 0;
+			color: white;
+			background: none;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 16px;
+			text-transform: uppercase;
+			line-height: 1; 
+			// width: 100%;
+			padding: 9px 0 6px;
+			cursor: pointer;
+		}
+
+		.icon-burger {
+			margin-left: 14px;
+			margin-top: -3px;
+		}
+	}
+}
+
+.mobile-bar {
+	display: none;
+	visibility: hidden;
+	padding: 10px 0;
+	background-color: $colorOrange;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	&__buttons {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.icon-phone {
+		width: 32px;
+		height: 32px;
+	}
+
+	.icon-email {
+		width: 40px;
+		height: 32px;
+	}
+	
+	.icon-marker {
+		width: 24px;
+		height: 32px;
+	}
+
+	.icon-facebook-round {
+		width: 34px;
+		height: 34px;
+	}
+
+	&__button {
+		fill: white;
+		display: inline-block;
+		margin-right: 46px;
+	}
 }
 
 .top-bar {
@@ -65,6 +138,7 @@
 		.icon {
 			fill: white;
 			margin-right: 14px;
+			flex: 0 0 auto;
 		}
 
 		&._mail {
@@ -242,6 +316,87 @@
 		&:active,
 		&:visited {
 			color: $colorFont;
+		}
+	}
+}
+
+@include _xl {
+
+	.top-bar {
+
+		&__item {
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		&__section {
+
+			&._address {
+				padding-left: 40px;
+			}
+		}
+	}	
+}
+
+@include _lg {
+	.header {
+		padding-top: 55px;
+
+		&__menu-button {
+			display: flex;
+			visibility: visible;
+			position: relative;
+
+			&._sticky {
+				position: fixed;
+				top: 55px;
+			}
+		}
+	}
+
+	.header-main {
+
+		&__inner {
+			padding: 35px 0;
+		}
+	}
+
+	.mobile-bar {
+		display: block;
+		visibility: visible;
+	}
+
+	.top-bar {
+		display: none;
+		visibility: hidden;
+	}
+
+	.menu {
+		display: none;
+		background: white;
+		width: 100%;
+		height: calc(100vh - 202px);
+		top: 0;
+		left: 0;
+		overflow: auto;
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&._opened {
+			display: flex;
+			position: fixed;
+		}
+	}
+
+	.menu__item {
+		.submenu {
+			visibility: visible;
+			opacity: 1;
+			position: static;
+			transform: translateY(0);
 		}
 	}
 }

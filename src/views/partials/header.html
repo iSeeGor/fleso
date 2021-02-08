@@ -32,6 +32,32 @@
 	<div class="site">
 
 		<header class="site__header header">
+			<div class="header__mobile-bar mobile-bar">
+				<div class="container">
+					<div class="mobile-bar__buttons">
+						<a class="mobile-bar__button" href="tel:0338139130">
+							<svg class="icon icon-phone">
+								<use xlink:href="symbol/sprite.svg#phone"></use>
+							</svg>
+						</a>
+						<a class="mobile-bar__button" href="mailto:info@fleso.de">
+							<svg class="icon icon-email">
+								<use xlink:href="symbol/sprite.svg#email"></use>
+							</svg>
+						</a>
+						<a class="mobile-bar__button" href="#">
+							<svg class="icon icon-marker">
+								<use xlink:href="symbol/sprite.svg#map-marker"></use>
+							</svg>
+						</a>
+						<a class="mobile-bar__button" href="#">
+							<svg class="icon icon-facebook-round">
+								<use xlink:href="symbol/sprite.svg#facebook-round"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
 			<div class="header__top-bar top-bar">
 				<div class="top-bar__container container">
 					<div class="top-bar__section _contacts">
@@ -79,7 +105,7 @@
 							<img src="images/logo.svg" alt="">
 						</a>
 
-						<nav class="header__menu menu">
+						<nav class="header__menu menu js-menu">
 						<ul class="menu__list">
 							<li class="menu__item">
 								<a href="/" class="menu__link _active">Home</a>
@@ -123,6 +149,16 @@
 							</svg>
 						</button>
 					</div>
+				</div>
+			</div>
+			<div class="header__menu-button">
+				<div class="container">
+					<button class="burger js-burger">
+						Menü
+						<svg class="icon icon-burger">
+							<use xlink:href="symbol/sprite.svg#burger"></use>
+						</svg>
+					</button>
 				</div>
 			</div>
 		</header>

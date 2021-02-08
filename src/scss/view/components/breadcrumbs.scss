@@ -9,7 +9,6 @@
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
-		@include Header18(inherit);
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
@@ -27,7 +26,6 @@
 	&__link {
 
 		text-decoration: none;
-		@include Header18(inherit);
 
 		&:hover {
 			color: #000000;

@@ -1,7 +1,8 @@
 window.addEventListener('DOMContentLoaded', function(){
 	mainSlider();
 	testimonialSlider();
-	brandSlider();
+	// brandSlider();
+	mobileMenu();
 });
 
 const mainSlider = () => {
@@ -50,4 +51,38 @@ const testimonialSlider = () => {
 		},
 
 	});
+}
+
+const mobileMenu = () => {
+
+	$('.js-burger').on('click', function(){
+		
+		$('.js-menu').toggleClass('_opened');
+		menuTopOffset();
+	});
+
+	function menuTopOffset(){
+		let topOffset = $('.header__menu-button').offset().top - $(window).scrollTop() + $('.header__menu-button').outerHeight();
+		$('.js-menu').css('top', topOffset + 'px');
+		$('.js-menu').css('height', 'calc(100vh - '+ topOffset +'px)');
+	}
+
+	
+	const stickyNavTop = $('.header__menu-button').offset().top;
+	const stickyNav = function(){
+		let scrollTop = $(window).scrollTop(); 
+
+		if (scrollTop > stickyNavTop - 55 ) { 
+			$('.header__menu-button').addClass('_sticky');
+		} else {
+			$('.header__menu-button').removeClass('_sticky'); 
+		}
+	};
+	stickyNav();
+
+	$(window).scroll(function() {
+		stickyNav();
+		menuTopOffset();
+	});	
+		
 }

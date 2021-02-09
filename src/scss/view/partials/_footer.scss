@@ -70,6 +70,11 @@
 			justify-content: space-between;
 			align-items: center;
 		}
+	}
+
+	&__mobile-bar {
+		position: static;
+		background: $colorBlack;
 	}	
 }
 
@@ -228,5 +233,149 @@
 			text-decoration: underline;
 			color: $colorBordo;
 		} 
+	}
+}
+
+@include _xl {
+		.footer-main {
+		padding-top: 0;
+	
+		.container {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__section {
+			flex: 1 1 600px;
+			max-width: 600px;
+
+			&:first-child {
+				margin-bottom: 20px;
+				position: relative;
+				z-index: 1;
+				padding: 95px 0 30px 0;
+
+				&::after {
+					content: '';
+					position: absolute;
+					width: 100vw;
+					height: 100%;
+					bottom: 0;
+					background: $colorOrange;
+					left: 50%;
+					transform: translateX(-50%);
+					z-index: -1;
+					
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					width: 100vw;
+					height: 10px;
+					bottom: 0;
+					background: $colorBordo;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+
+			&:last-child {
+				padding: 0;
+			}
+		}
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+
+
+	.footer-main__section:last-child .footer-item:first-child {
+		margin-right: 0;
+	}
+	.footer-main__section:last-child {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.footer-main__section:last-child .footer-item {
+		flex: 0 0 40%;
+		max-width: 40%;
+	}
+
+	.footer-main__section:last-child .footer-item._socialmedia {
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-top: 20px;
+		display: flex;
+		// justify-content: center;
+	}
+
+	.footer-main__section .footer-socialmedia {
+		position: static;
+		transform: translateX(0);
+	}
+
+	.footer__bottom .container {
+		max-width: 640px;
+	}
+}
+
+@include _lg {
+
+	.footer-main {
+		padding-bottom: 0;
+
+		&__section:first-child {
+			margin-bottom: 0;
+		}
+		
+		&__section:last-child {
+			display: none;
+			visibility: hidden;
+		}
+	}
+}
+
+@include _md {
+
+	.footer__logo {
+		img {
+			max-width: inherit;
+		}
+	}
+
+	.footer-item {
+
+		&__title {
+			text-align: center;
+		}
+
+		&__content {
+			text-align: center;
+		}
+	}
+}
+
+@include _480 {
+
+	.footer__bottom {
+
+		.container {
+			flex-direction: column;
+		}
+
+		.copyrights {
+			margin-bottom: 5px;
+		}	
+	}
+}
+
+@include _350 {
+
+	.footer__logo img {
+		width: 240px;
 	}
 }

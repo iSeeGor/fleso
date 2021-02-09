@@ -1,9 +1,8 @@
 window.addEventListener('DOMContentLoaded', function(){
 	mainSlider();
 	testimonialSlider();
-	// brandSlider();
+	brandSlider();
 	
-
 	if(window.innerWidth <= 992) {
 		mobileMenu();
 	}
@@ -93,4 +92,41 @@ const mobileMenu = () => {
 		$(this).toggleClass('_opened');
 	});
 		
+}
+
+const brandSlider = () => {
+
+	const slider = new Swiper('.js-brands-slider', {
+	
+		slidesPerView: 5,
+		// spaceBetween: 120,
+		loop: true,
+		// centeredSlides: true,
+		freeMode: true,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+
+		breakpoints: {
+			// 320: {
+			// 	slidesPerView: 1,
+			// 	centeredSlides: true,
+			// },
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+				centeredSlides: true,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1260: {
+				slidesPerView: 5,
+			}
+		}
+	})
 }

@@ -56,3 +56,9 @@ svg {
 	}
 }
 
+@include _sm {
+
+	body {
+		font-size: 18px;
+	}
+}

@@ -8,7 +8,7 @@
 		position: relative;
 		padding: 33px 0;
 		text-align: center;
-		margin: 40px 0;
+		margin: 80px 0 40px;
 
 		&::before,
 		&::after {
@@ -46,7 +46,7 @@
 
 	&__typography {
 		text-align: center;
-		margin: 40px 0;
+		margin: 40px 0 80px;
 	}
 }
 
@@ -122,11 +122,14 @@
 .main-slider {
 
 	.swiper-slide {
-		min-height: 640px;
+		// min-height: 640px;
+		height: auto;
 	}
 }
 
 .testimonial {
+	margin-top: 60px;
+	margin-bottom: 120px;
 	
 	&__slider-section {
 		padding: 40px 0;
@@ -144,13 +147,10 @@
 
 	&__icon {
 		width: 36px;
-		margin-right: 20px;
+		margin-right: 10px;
 	}
 
 	&__title {
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		font-family: $fontSecondary;
 		font-size: 30px;
 		font-weight: $regular;
@@ -193,15 +193,35 @@
 	border-top: 1px solid #BABABA;
 	border-bottom: 1px solid #BABABA;
 
-	&__list {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	.swiper-container {
+
+		@include _lg {
+			overflow: visible;
+		}
 	}
+
+	.swiper-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: auto;
+
+		img {
+			filter: grayscale(100%);
+			transition: filter 0.2s;
+			cursor: pointer;
+
+			&:hover {
+				filter: grayscale(0%);
+			}
+		}
+	}
+	
 }
 
 .text-section {
 	padding: 30px 0 55px;
+	margin: 40px 0 100px;
 	background: $colorBlack;
 	color: white;
 
@@ -232,6 +252,7 @@
 
 	&__title {
 		font-size: 30px;
+		line-height: 1;
 		font-family: $fontSecondary;
 		color: white;
 		font-weight: $regular;
@@ -265,7 +286,7 @@
 	padding: 20px 0;
 	background: $colorBlack;
 	color: white;
-	margin-bottom: 105px;
+	margin: 40px 0 100px;
 
 	&__header {
 		display: flex;
@@ -295,5 +316,262 @@
 		font-family: $fontSecondary;
 		color: white;
 		font-weight: $regular;
+	}
+}
+@include _xl {
+
+	.section-info {
+
+		&__header {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__pre-title,
+		&__title {
+			line-height: 1.1;
+			text-align: center;
+			margin: 0;
+		}
+	}
+
+}
+
+@include _lg {
+
+	.section {
+
+
+		&__title {
+			font-size: 36px;
+		}
+	}
+
+	.section-card {
+			height: auto;
+
+		&::after {
+			display: none;
+		}
+
+		&__inner {
+			flex-direction: column;
+		}
+
+		&__media,
+		&__content {
+
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+		&__media {
+			height: 330px;
+		}
+
+		&__content {
+			border-top: 10px solid $colorBordo;
+		}
+	}
+
+	.text-section {
+
+		&__header {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		&__pre-title {
+			justify-content: center;
+			text-align: center;
+			margin: 0;
+		}
+
+		&__body {
+			display: block;
+		}
+
+		&__media {
+			width: 320px;
+			height: 300px;
+			margin-right: 30px;
+			float: left;
+			
+		}
+
+		&__typography {
+			height: auto;
+			overflow: inherit;
+		}
+	}
+
+	.section-info {
+
+		&__pre-title {
+			flex-direction: column;
+			align-items: center;
+			
+			.icon {
+				margin: 0 0 10px 0;
+			}
+		}
+	}
+
+	.testimonial {
+		margin-top: 40px;
+		margin-bottom: 80px;
+	}
+}
+
+@include _md {
+
+	.section-card {
+		margin: 30px 0 110px;
+
+		&__media {
+			height: 330px;
+		}
+	}
+
+	.testimonial {
+
+		&__title,
+		&__message {
+			font-size: 28px;
+		}
+
+		&__body {
+			margin-top: 25px;
+		}
+	}
+
+	.text-section {
+
+		&__pre-title,
+		&__title {
+			font-size: 25px;
+		}
+
+		&__media {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+
+		&__typography {
+			text-align: center;
+		}
+	}
+} 
+
+@include _sm {
+
+	.section {
+
+		&__header {
+			margin: 60px 0 30px;
+			padding: 23px 0;
+		}
+
+		&__title {
+			font-size: 26px;
+		}
+
+		&__typography {
+			margin: 30px 0 60px;
+		}
+	}
+
+	.section-card {
+		margin: 30px 0 80px;
+
+		margin-left: -20px;
+		margin-right: -20px;
+
+		&__media {
+			height: 265px;
+		}
+
+		&__content {
+			padding: 35px 30px 35px 30px;
+		}
+
+		&__title {
+			font-size: 25px;
+			max-height: 100%;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		&__typography {
+			max-height: 100%;
+		}
+
+		&__button {
+			position: static;
+			width: 100%;
+			justify-content: center;
+			transform: translateY(0);
+		}
+	}
+
+	.testimonial {
+
+		&__slider-section {
+			padding: 40px 15px;	
+		}
+
+		.container {
+			padding: 0;
+		}
+
+		&__icon {
+			width: 32px;
+			margin-right: 10px;
+		}
+
+		&__title,
+		&__message {
+			font-size: 25px;
+		}
+	}
+
+	.section-info {
+
+		&__pre-title {
+
+			.icon {
+				width: 25px;
+				height: 25px;
+			}
+		}
+
+		&__pre-title,
+		&__title {
+
+			font-size: 25px;
+		}
+	}
+
+}
+
+@include _480 {
+
+	.text-section {
+
+		&__pre-title {
+			flex-direction: column;
+
+			.icon {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@include _350 {
+
+	.section-card {
+		font-size: 16px;
 	}
 }

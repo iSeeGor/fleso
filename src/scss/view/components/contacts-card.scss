@@ -1,0 +1,172 @@
+/*============================================================================
+	#CONTACTS CARD
+==============================================================================*/
+.contacts-card {
+
+	&__inner {
+		display: flex;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 100%;
+			width: 10px;
+			background: $colorBordo;
+			z-index: 1;
+		}
+
+	}
+
+	&__map {
+		min-height: 200px;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	&__item-list {
+		padding: 42px 46px 30px 48px; 
+		background: $colorBlack;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		color: white;
+		fill: white;
+		font-size: 33px;
+		line-height: 1.27;
+		text-decoration: none;
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 24px;
+
+		.icon {
+			margin-right: 33px;
+			flex: 0 0 auto;
+		}
+
+		&._mail,
+		&._address {
+
+			.icon {
+				margin-top: 7px;
+			}
+		}
+
+		&._worktime {
+			font-size: 20px;
+			margin-bottom: 0;
+			padding-top: 15px;
+			padding-left: 7px;
+		}
+	
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	.icon-phone {
+		height: 32px;
+		width: 32px;
+	}
+
+	.icon-email {
+		width: 32px;
+		height: 24px;
+	}
+
+	.icon-marker {
+		width: 27px;
+		height: 36px;
+	}
+
+	.icon-clock {
+		height: 21px;
+		width: 21px;
+	}
+}
+
+@include _lg {
+
+	.contacts-card {
+		&__inner {
+			flex-direction: column;
+			&::before {
+				display: none;
+			}
+		}
+
+		&__map {
+			flex: 0 0 100%;
+			max-width: 100%;
+			min-height: 340px;
+			border-bottom: 10px solid $colorBordo;
+		}
+	}
+}
+
+@include _md {
+
+	.contacts-card {
+
+		&__item {
+    		font-size: 20px;
+			margin-bottom: 25px;
+
+			&._worktime {
+				padding-top: 0px;
+				padding-left: 0px;
+			}
+		}
+
+		.icon-phone {
+			width: 24px;
+			height: 24px;
+		}
+
+		.icon-email {
+			width: 24px;
+			height: 22px;
+			margin-top: 2px !important; 
+		}
+
+		.icon-marker {
+			width: 22px;
+			height: 28px;
+			margin-top: 5px !important; 
+		}
+	}
+}
+
+@include _480 {
+
+	.contacts-card {
+
+		&__item-list {
+
+			padding: 35px 30px 35px 30px;
+		}
+
+		&__item {
+
+			.icon {
+    			margin-right: 20px;
+			}
+		}
+	}
+}
+
+@include _350 {
+
+	.contacts-card {
+
+		&__item {
+			font-size: 18px !important;
+		}
+	}
+}

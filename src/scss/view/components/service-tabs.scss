@@ -1,0 +1,152 @@
+/*============================================================================
+	#SERVICE TABS
+==============================================================================*/
+.service {
+	
+	&__header {
+		display: flex;
+		justify-content: center;
+		// align-items: flex-end;
+		margin-bottom: 30px;
+	}
+
+	&__button {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: 0;
+		background: none;
+		fill: #0E0E0E;
+		color: #0E0E0E;
+		font-size: 16px;
+		margin: 0 10px;
+		cursor: pointer;
+		transition: color 0.2s ;
+		margin-bottom: 20px;
+
+		.icon {
+			margin: auto 0;
+		}
+
+		span {
+			display: inline-block;
+			margin-top: 10px;
+		}
+
+		&:hover {
+			fill: $colorOrange;
+			color: $colorOrange;
+		}
+
+		&._active {
+			fill: $colorOrange;
+			color: $colorOrange;
+		}
+	}
+
+	&__item {
+		
+		&:not(._active) {
+			display: none;
+		}
+	}
+}
+
+.service-item {
+
+	display: flex;
+	// flex-wrap: wrap;
+
+	&__media {
+		flex: 0 0 310px;
+		max-width: 310px;
+		// height: 100%;
+		border-right: 10px solid $colorBordo;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		background: $colorBlack;
+		color: white;
+		padding: 32px 46px 38px 42px;
+		position: relative;
+	}
+
+	&__title {
+		font-family: $fontSecondary;
+		font-size: 30px;
+		line-height: 1;
+		margin-bottom: 22px;
+	}
+
+	&__typography {
+
+	}
+
+	&__button {
+		position: absolute;
+		z-index: 2;
+		background: $colorOrange;
+		right: 0;
+		bottom: 0;
+		transform: translateY(50%);
+	}
+}
+
+@include _lg {
+
+	.service {
+		
+		&__header {
+			flex-wrap: wrap;
+		}
+	}
+
+	.service-item {
+		display: block;
+
+		&__media {
+			height: 330px;
+			flex: 100%;
+			max-width: 100%;
+			border-right: none;
+			border-bottom: 10px solid $colorBordo;
+		}
+
+		&__title {
+			font-size: 26px;
+			margin-bottom: 20px;
+		}
+
+		&__typography {
+			font-size: 18px;
+		}
+	}
+}
+
+@include _480 {
+
+	.service-item {
+		text-align: center;
+
+		&__media {
+			height: 310px;
+		}
+
+		&__button {
+			font-size: 16px;
+			width: 100%;
+			text-align: center;
+			justify-content: center;
+		}
+
+		&__content {
+			    padding: 32px 20px 38px 20px;
+		}
+	}
+}

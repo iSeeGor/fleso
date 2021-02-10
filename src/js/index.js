@@ -2,6 +2,9 @@ window.addEventListener('DOMContentLoaded', function(){
 	mainSlider();
 	testimonialSlider();
 	brandSlider();
+	initModals();
+	serviceTabs();
+	googleMap();
 	
 	if(window.innerWidth <= 992) {
 		mobileMenu();
@@ -130,3 +133,112 @@ const brandSlider = () => {
 		}
 	})
 }
+
+const initModals = () => {
+    
+	$('.js-modal').magnificPopup({
+        type: 'inline',
+        preloader: false,
+        modal: false,
+        // removalDelay: 300,
+        showCloseBtn: false,
+        callbacks: {
+            
+        }
+    });
+
+	$('.js-modal-close').on('click', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+};
+
+const serviceTabs = () => {
+
+	$('.service__button').on('click', function(){
+		let index = $(this).index();
+		$(this).addClass('_active').siblings().removeClass('_active');
+		$('.service__item').eq(index).addClass('_active').siblings().removeClass('_active')
+	})
+}
+
+
+const googleMap = () => {
+    function initMap() {
+        let popupContent =
+                '<p class="marker_content">Barnimstraße 26 14770 Brandenburg / Havel</p>',
+            image = {
+                url: '../assets/icons/marker.svg'
+                // size: new google.maps.Size(49, 65),
+                // origin: new google.maps.Point(-3, 0),
+                // anchor: new google.maps.Point(-40, 140)
+            },
+            coordinates = { lat: 43.9103127, lng: -69.9889503 },
+            map = new google.maps.Map(document.querySelector('.js-map-container'), {
+                center: coordinates,
+				disableDefaultUI: true,
+                zoom: 17,
+                styles: [
+                    {
+                        featureType: 'poi',
+                        elementType: 'geometry.fill',
+                        stylers: [
+                            {
+                                color: '#C5E3BF'
+                            }
+                        ]
+                    },
+                    {
+                        featureType: 'road',
+                        elementType: 'geometry',
+                        stylers: [
+                            {
+                                lightness: 100
+                            },
+                            {
+                                visibility: 'simplified'
+                            }
+                        ]
+                    },
+                    {
+                        featureType: 'road',
+                        elementType: 'geometry.fill',
+                        stylers: [
+                            {
+                                color: '#D1D1B8'
+                            }
+                        ]
+                    },
+                    {
+                        featureType: 'water',
+                        elementType: 'geometry',
+                        stylers: [
+                            {
+                                visibility: 'on'
+                            },
+                            {
+                                color: '#C6E2FF'
+                            }
+                        ]
+                    }
+                ]
+            }),
+            marker = new google.maps.Marker({
+                position: coordinates,
+                map: map,
+                // icon: image,
+                animation: google.maps.Animation.DROP
+            }),
+            infowindow = new google.maps.InfoWindow({
+                content: popupContent
+            });
+
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+    }
+    if(document.querySelector('.js-map-container')){
+        initMap();
+    }
+    
+};

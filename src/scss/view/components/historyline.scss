@@ -1,0 +1,161 @@
+/*============================================================================
+	#HISTORYLINE
+==============================================================================*/
+
+.historyline {
+
+	&__container {
+		position: relative;
+		padding: 20px 0 10px 0;
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 3px;
+			background: #DFDFDF;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			height: 22px;
+			width: 22px;
+			background: #DFDFDF;
+			top: 0;
+			left: 50%;
+			border-radius: 100%;
+			transform: translateX(-50%);
+		} 
+	}
+
+	&__row {
+		max-width: 50%;
+		position: relative;
+		margin-bottom: 36px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 3px;
+			width: 100%;
+			background: #DFDFDF;
+			top: 25px;
+		}
+	}
+
+	&__row:nth-child(2n){
+		margin-left: auto;
+
+		.historyline__text {
+			margin-left: auto;
+		}
+
+		.historyline__year {
+			right: auto;
+			left: -45px;
+			transform: translateY(50%) translateX(-100%);
+		}
+	}
+
+	&__text {
+		background: $colorBlack;
+		color: white;
+		padding: 28px 28px;
+		position: relative;
+		z-index: 1;
+		width: calc(100% - 125px);
+	}
+
+	&__year {
+		font-size: 34px;
+		font-weight: $bold;
+		line-height: 1;
+		color: $colorOrange;
+		position: absolute;
+		top: -7px;
+		right: -45px;
+		transform: translateY(50%) translateX(100%);
+	}
+}
+
+@include _lg {
+
+	.historyline {
+
+		&__container {
+
+			&::before,
+			&::after {
+				left: 100px;
+			}
+		}
+
+		&__row {
+			max-width: calc(100% - 100px);
+			margin-left: auto;
+		}
+
+		&__text {
+			margin-left: auto;
+		}
+
+		&__year {
+			right: auto;
+			left: -30px !important;
+			transform: translateY(50%) translateX(-100%);
+		}
+	}
+}
+
+@include _md {
+
+	.historyline {
+
+		&__text {
+			width: calc(100% - 80px);
+			font-size: 18px;
+		}
+
+		&__year {
+			font-size: 30px;
+		}
+	}
+}
+
+@include _480 {
+
+	.historyline {
+
+		&__container {
+
+			&::before,
+			&::after {
+				left: 0;
+			}
+		}
+
+		&__row {
+			max-width: 100%;
+			padding-top: 60px;
+
+			&::before {
+				top: 85px;
+			}
+		}
+
+		&__text {
+			width: calc(100% - 40px);
+			font-size: 16px;
+		}
+
+		&__year {
+			top: 15px;
+			left: 40px !important;
+			transform: none !important;
+		}
+	}
+}

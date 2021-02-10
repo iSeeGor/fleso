@@ -1,0 +1,29 @@
+/*============================================================================
+	#COUPONS
+==============================================================================*/
+.coupons {
+
+	&__row {
+		margin: 0 -10px;
+		display: flex;
+		flex-wrap: wrap;
+
+		&._button {
+			margin-top: 60px;
+			justify-content: center;
+		}
+	}
+
+	&__col {
+		flex: 0 0 calc(50% - 20px);
+		margin: 10px;
+	}
+}
+
+@include _md {
+
+	.coupons__col {
+		flex: 0 0 calc(100% - 20px);
+		margin: 10px;
+	}
+}
